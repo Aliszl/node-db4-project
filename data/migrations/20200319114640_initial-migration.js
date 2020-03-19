@@ -1,4 +1,3 @@
-
 exports.up = function(knex) {
     return knex.schema
     .createTable('recipes', tbl => {
@@ -37,8 +36,8 @@ exports.up = function(knex) {
         .inTable('ingredients')
         .onDelete('RESTRICT')
         .onUpdate('RESTRICT')
+        tbl.string('quantity').notNullable()
       })
-
 };
 
 exports.down = function(knex) {
