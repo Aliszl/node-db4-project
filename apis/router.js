@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.get("/api/recipes/", async (req, res) => {
-  const posts = await helpers.find();
+  const posts = await server.find();
   res.status(200).json({ posts });
 });
 
